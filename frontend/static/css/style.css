@@ -1,1 +1,161 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background: black;
+    color: white;
+}
 
+/* Wallpaper */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../images/background.jpg") center/cover no-repeat;
+    filter: blur(45px) brightness(0.3);
+    transform: scale(1.1);
+    z-index: -2;
+}
+
+/* Glow */
+body::after {
+    content: "";
+    position: fixed;
+    width: 2000px;
+    height: 2000px;
+    background: radial-gradient(circle, rgba(236,72,153,0.35), transparent 70%);
+    filter: blur(320px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar-custom {
+    backdrop-filter: blur(25px);
+    background: rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(236,72,153,0.3);
+    padding: 22px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Brand */
+.brand {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-decoration: none;
+    background: linear-gradient(90deg, #ec4899, #c084fc, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hamburger */
+.menu-icon {
+    cursor: pointer;
+    width: 35px;
+}
+
+.menu-icon div {
+    height: 3px;
+    background: linear-gradient(90deg, #ec4899, #c084fc);
+    margin: 6px 0;
+    border-radius: 5px;
+}
+
+/* Menu */
+.menu-panel {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(25px);
+    transition: 0.4s;
+    padding: 90px 30px;
+    z-index: 1000;
+}
+
+.menu-panel a {
+    display: block;
+    margin: 22px 0;
+    font-size: 22px;
+    color: #f0abfc;
+    text-decoration: none;
+}
+
+.menu-panel.open {
+    left: 0;
+}
+
+/* Sections */
+section {
+    padding: 110px 90px;
+}
+
+/* Hero */
+.hero h1 {
+    font-size: 72px;
+}
+
+.hero p {
+    font-size: 28px;
+    opacity: 0.7;
+}
+
+/* Titles */
+.section-title {
+    font-size: 52px;
+    margin-bottom: 40px;
+}
+
+/* Panels */
+.panels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.panel {
+    padding: 55px;
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(236,72,153,0.35);
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.panel:hover {
+    transform: scale(1.04);
+    box-shadow: 0 25px 90px rgba(236,72,153,0.35);
+}
+
+.panel h3 {
+    font-size: 36px;
+}
+
+/* Buttons */
+.login-tabs button {
+    margin: 12px;
+    font-size: 24px;
+    padding: 14px 34px;
+    border-radius: 45px;
+    border: none;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ec4899, #c084fc);
+    color: white;
+}
+
+/* Footer */
+.footer {
+    padding: 90px;
+    backdrop-filter: blur(25px);
+    background: rgba(0,0,0,0.75);
+    border-top: 1px solid rgba(236,72,153,0.3);
+}
